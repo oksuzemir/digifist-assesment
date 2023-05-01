@@ -1,0 +1,325 @@
+/* İmport Fonts  */
+@import url("https://fonts.cdnfonts.com/css/itc-avant-garde-gothic-std-book");
+@import url("https://fonts.cdnfonts.com/css/avenir");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.main {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+}
+
+.left,
+.right {
+  flex: 0 0 50%;
+}
+
+/* left */
+.left img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* right */
+
+.right {
+  padding: 96px 106px 96px 120px;
+  background-color: #fff;
+  width: 50%;
+}
+
+.right .section-content .section-title {
+  font-family: "ITC Avant Garde Gothic Std Bold", sans-serif;
+  font-size: 32px;
+  font-weight: bold;
+  color: #000;
+}
+
+.right .section-content .section-text {
+  font-family: "Avenir", sans-serif;
+  color: #666666;
+  line-height: 26px;
+  margin-top: 12px;
+  max-width: 90%;
+}
+
+.right .section-content .section-button {
+  margin-top: 32px;
+}
+
+.right .section-content .section-button a {
+  font-family: "Avenir";
+  font-size: 13px;
+  text-decoration: none;
+  color: #000;
+  padding-bottom: 5px;
+  position: relative;
+  text-transform: capitalize;
+}
+
+.right .section-content .section-button a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #000;
+  transition: 0.3s ease all;
+}
+
+.right .section-content .section-button a:hover::after {
+  width: 50%;
+}
+
+.swiper {
+  margin-top: 75px;
+  width: 120%;
+}
+
+.swiper .swiper-slide {
+  height: 368px;
+  transition: 0.2s;
+}
+
+.product-img img {
+  width: 100%;
+  height: 310px;
+  object-fit: cover;
+}
+
+.product-content {
+  background-color: #fff;
+  padding: 12px 0;
+  font-size: 14px;
+  font-family: "Avenir", sans-serif;
+  font-weight: 300;
+  color: #000;
+  height: 44px;
+}
+
+.product-name {
+  color: #2d2d2d;
+  font-size: 13px;
+}
+
+.product-meta {
+  margin-top: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.product-options {
+  display: flex;
+  justify-content: space-between;
+}
+
+.product-options input {
+  margin-left: 8px;
+}
+
+.custom-radio {
+  /* hiding browser el */
+  appearance: none;
+  /* Safari support */
+  -webkit-appearance: none;
+  border-radius: 50%;
+}
+
+.product-options .radio-button:nth-child(1) .custom-radio {
+  border: 5px solid #99c3cc;
+}
+.product-options .radio-button:nth-child(2) .custom-radio {
+  border: 5px solid #cc9999;
+}
+.product-options .radio-button:nth-child(3) .custom-radio {
+  border: 5px solid #cb99cc;
+}
+.product-options .radio-button:nth-child(4) .custom-radio {
+  border: 5px solid #a6cc99;
+}
+
+.custom-radio:focus-visible {
+  outline-offset: 0;
+}
+
+#box-shadow:checked {
+  box-shadow: 0 0 0 1px #000;
+  background-color: #000;
+  border-width: 5px;
+}
+
+.swiper .prev,
+.swiper .next {
+  cursor: pointer;
+  z-index: 100;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.65;
+  transition: 0.2s;
+}
+.swiper .prev:hover,
+.swiper .next:hover {
+  opacity: 1;
+}
+.swiper .prev svg,
+.swiper .next svg {
+  width: 20px;
+  height: 20px;
+}
+.swiper .prev svg path,
+.swiper .next svg path {
+  fill: #fff;
+}
+.swiper .prev {
+  left: 25px;
+}
+.swiper .next {
+  right: 25px;
+}
+.swiper .pagination {
+  margin-left: 8px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+  z-index: 100;
+}
+.swiper .pagination span {
+  font-size: 0;
+  opacity: 1;
+  margin: 0px 6px !important;
+  border: 1px solid #fff;
+}
+.swiper .pagination span.swiper-pagination-bullet-active {
+  background-color: transparent;
+  transform: scale(1.5);
+}
+
+/* responsive queries */
+@media screen and (min-width: 1080px) {
+    .main {
+        
+        min-height: 100vh;
+       
+      }
+}
+
+@media screen and (max-width: 1081px) {
+  .right .section-content .section-title {
+    font-size: 20px;
+  }
+
+  .section-text {
+    display: none;
+  }
+  
+}
+
+@media screen and (max-width: 860px) {
+  .main {
+    min-height: 100%;
+    display: block;
+  }
+  .right {
+    width: 100%;
+    padding: 0 24px;
+    position: absolute;
+    top: 95%;
+
+    height: 100%;
+  }
+
+  .left img {
+    height: 100%;
+  }
+
+  .section-overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 212, 255, 0) 100%
+    );
+  }
+
+  .right .section-content .section-title {
+    font-size: 20px;
+    color: #fff;
+  }
+
+  .section-text {
+    display: none;
+  }
+
+  .right .section-content .section-button {
+    margin-top: 16px;
+  }
+
+  .right .section-content .section-button a {
+    color: #fff;
+  }
+
+  .right .section-content .section-button a::after {
+    background-color: #fff;
+  }
+  .right .section-content {
+    transform: translateY(-170%);
+  }
+
+  .swiper {
+    margin-top: 32px;
+    transform: translateY(-38%);
+  }
+
+  .swiper .swiper-slide {
+    height: 300px;
+  }
+
+  .product-img img {
+    height: 200px;
+  }
+  .product-meta {
+    display: block;
+  }
+
+  .product-options {
+    display: flex;
+    justify-content: left;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .right {
+    top: 65%;
+  }
+  .swiper {
+    margin-top: 90px;
+  }
+}
+
+
+@media screen and (max-width: 400px) {
+    .right {
+        top: 50%;
+      }
+    .swiper {
+        transform: translateY(-50%);
+        margin-top: 0;
+      }
+}
